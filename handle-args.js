@@ -1,17 +1,17 @@
 module.exports = args => {
   const errorText = {
     "noPath": `
-    Try again with the input file path, eg. 'npm run coverage-parser --file coverage.json'
-    Use 'coverage-parser --help' for more information.
+    Try again with the input file path, eg. 'coverage-parcsser --file coverage.json'
+    Use 'coverage-parcsser --help' for more information.
     `,
 
     "badArgs": `
     Malformed arguments provided 😭😭
-    Use 'coverage-parser --help' for more information and try again.
+    Use 'coverage-parcsser --help' for more information and try again.
     `,
 
     "noArgs": `
-    Try again with the input file path, eg. 'coverage-parser --file coverage.json'
+    Try again with the input file path, eg. 'coverage-parcsser --file coverage.json'
     Use 'coverage-parser --help' for more information.
     `,
 
@@ -28,23 +28,23 @@ module.exports = args => {
     if (args.includes("--help") || args.includes("--h")) {
       const helpText = `
       /* ======================================================================== */
-      /* ====================   🔥  COVERAGE REPORT PARSER 🔥   =================== */
+      /* =========================  COVERAGE PARCSSER   ========================= */
       /* ======================================================================== */
       github: @isAdrisal 
       
-      This utility parses the raw JSON output from Chrome DevTools' coverage
-      reports and outputs the covered code to a file.
+      This utility parses the JSON output from Chrome DevTools' coverage
+      reports and outputs the covered CSS code on a per-file basis.
       
       Arguments:
       --file   ==> Path of the input .json file (REQUIRED)
     
       --select ==> If provided, parses only the report for this URL (OPTIONAL).
-                   Defaults to all resource URLS. Enter as string eg. "url"
+                   Defaults to all resource URLs. Wrap url in quotes, eg. "url"
     
       --outdir ==> Output directory of the exported file(s) (OPTIONAL).
                    Defaults to current directory.
     
-      eg. npm run coverage-parser --file ./input.json --select "https://foo.bar/example.js" --outdir ./output
+      eg. coverage-parcsser --file coverage.json --select "https://foo.bar/example.css" --outdir ./output
       `
       console.log(helpText);
       process.exit(0);
