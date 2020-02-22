@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const handleArgs = require("./handle-args");
 const parser = require("./parse-data");
 const saveFiles = require("./save-files");
