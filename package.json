@@ -1,6 +1,6 @@
 {
   "name": "coverage-parcsser",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A lightweight utility to parse Chrome DevTools CSS coverage reports and output a usable file(s).",
   "main": "index.js",
   "scripts": {},
